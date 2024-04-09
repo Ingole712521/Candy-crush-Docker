@@ -54,7 +54,10 @@ Ensure you have an AWS IAM user with the necessary permissions to interact with 
 ![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/ef62dd64-3c5f-4eef-bfa1-46a1ddd40c18)
 
 ## Video :- 
-https://drive.google.com/file/d/1Uchm-jOpCTj-JY9dxl68E8qTctpxYLvB/view?usp=drive_link
+https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/5118e468-9681-4dac-bcb0-620e75812450
+
+
+
 
 ## AWS ECR images
 ![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/6dfa2b87-f0e5-4cfd-be52-0456a84298e1)
