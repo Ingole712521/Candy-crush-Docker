@@ -49,7 +49,6 @@ This repository is configured with GitHub Actions to automate the build and depl
 Make sure to configure Docker Hub integration in your GitHub repository and add Docker Hub credentials as GitHub secrets.
 
 ## AWS Configuration
-
 Ensure you have an AWS IAM user with the necessary permissions to interact with ECS and EC2. Add the IAM user access key and secret access key as GitHub secrets.
 ##Image upload on ECR succesfully 
 ![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/ef62dd64-3c5f-4eef-bfa1-46a1ddd40c18)
