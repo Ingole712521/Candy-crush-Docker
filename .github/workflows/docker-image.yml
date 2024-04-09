@@ -20,12 +20,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t your-image-name .
+        run: docker build -t candy .
 
       - name: Push Docker image to DockerHub
         run: |
-          docker tag your-image-name:latest ${{ secrets.DOCKER_USERNAME }}/your-image-name:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/your-image-name:latest
+          docker tag your-image-name:latest ${{ secrets.DOCKER_USERNAME }}/candy:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/candy:latest
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
