@@ -24,7 +24,7 @@ jobs:
 
       - name: Push Docker image to DockerHub
         run: |
-          docker tag your-image-name:latest ${{ secrets.DOCKER_USERNAME }}/candy:latest
+          docker tag candy:latest ${{ secrets.DOCKER_USERNAME }}/candy:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/candy:latest
 
       - name: Configure AWS credentials
