@@ -54,3 +54,7 @@ Ensure you have an AWS IAM user with the necessary permissions to interact with 
 ##Image upload on ECR succesfully 
 ![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/ef62dd64-3c5f-4eef-bfa1-46a1ddd40c18)
 
+## AWS ECR images
+![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/6dfa2b87-f0e5-4cfd-be52-0456a84298e1)
+
+
