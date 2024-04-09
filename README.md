@@ -1,7 +1,3 @@
-It looks like you've outlined the steps to build, run, and deploy a Dockerized application using GitHub Actions. Let's organize these steps into a proper README file for your GitHub repository:
-
----
-
 # Candy Crush Docker Deployment
 
 This repository contains the source code and deployment instructions for the Candy Crush application using Docker and AWS ECS.
