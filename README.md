@@ -10,6 +10,18 @@ Before you begin, make sure you have the following:
 - AWS account with ECS and EC2 instance set up.
 - GitHub account with Docker Hub integration.
 
+## GitHub Action Setup
+
+Before running this GitHub Action in your GitHub account, ensure you have the following information available:
+
+1. **DOCKER_USERNAME**: Your Docker username for authentication and pushing Docker images.
+2. **AWS_ACCESS_KEY_ID**: The Access Key ID for your AWS account to interact with Amazon Web Services.
+3. **AWS_SECRET_ACCESS_KEY**: The Secret Access Key corresponding to your AWS Access Key ID for secure authentication.
+4. **AWS_ECR_REPO**: The name of the Amazon Elastic Container Registry (ECR) repository where you intend to push Docker images.
+5. **ECR_REPOSITORY**: The name of the repository in Elastic Container Registry where images will be stored.
+
+Having these details handy will streamline the setup process and ensure seamless execution of the GitHub Action.
+
 ## Getting Started
 
 Follow these steps to build, run, and deploy the Candy Crush application:
