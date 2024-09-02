@@ -45,6 +45,14 @@ jobs:
         id: login-pf-aws-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      - name: Create ECR Repository if Not Exists
+        id: create-repo
+        run: |
+          REPO_NAME="myrepo"
+          if ! aws ecr describe-repositories --region ${{ secrets.AWS_REGION }} --repository-names $REPO_NAME; then
+            aws ecr create-repository --repository-name $REPO_NAME --region ${{ secrets.AWS_REGION }}
+          fi
+
       - name: Build and push the tagged docker image to Amazon ECR
         id: containerImage
         env:
