@@ -52,7 +52,7 @@ Follow these steps to build, run, and deploy the Candy Crush application:
    - Obtain the public IP address of your AWS EC2 instance.
    - Paste the public IP address in your web browser.
      
-6. ** Add the Secret in Github action** : 
+6. **Add the Secret in Github action**: 
    - You can obtain all the secret from AWS at the time of Creating a cluster and ECR 
    - In this file i have add in such a way that even if ECR repo get depleted  at the of workflow it will automatically create the ECR repo and assgin it to ECS
    - Images of secret you need to add
@@ -82,6 +82,10 @@ https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/5118e468-9681
 
 
 
+
+
+##WorkFlow Run Sucessfully
+![image](https://github.com/user-attachments/assets/341933cd-8919-4c3c-b514-7a7cbca6b036)
 
 ## AWS ECR images
 ![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/6dfa2b87-f0e5-4cfd-be52-0456a84298e1)
