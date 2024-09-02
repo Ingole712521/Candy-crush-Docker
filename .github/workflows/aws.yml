@@ -1,8 +1,10 @@
+# @format
+
 name: Deploy to Amazon ECS
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build_and_push_image:
@@ -67,9 +69,9 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: ${{ secrets.ECS_TASK_DEFINITION }}  # Path to your ECS task definition file
-          container-name: candy  # Replace with your actual container name in the task definition
-          image: ${{ steps.containerImage.outputs.image }}
+          task-definition: ${{ secrets.ECS_TASK_DEFINITION }} # Path to your ECS task definition file
+          container-name: candy # Replace with your actual container name in the task definition
+          image: nehal71/candy
 
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
