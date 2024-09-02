@@ -58,7 +58,8 @@ Follow these steps to build, run, and deploy the Candy Crush application:
    - Images of secret you need to add
    - ![image](https://github.com/user-attachments/assets/f8349666-1d3d-42bf-af2d-3b778faf30fe)
 
-
+## Detail Documentaoin of THis Project 
+   - https://docs.google.com/document/d/1xZVSh4BGPe4m3RwG8UagOR5c72h7kjM8GTy_IuIE21A/edit?usp=sharing
 ## GitHub Actions
 
 This repository is configured with GitHub Actions to automate the build and deployment process. Ensure Docker Hub and AWS IAM credentials are set up as GitHub secrets for the workflows to run successfully.
