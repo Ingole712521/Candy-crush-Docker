@@ -9,6 +9,7 @@ Before you begin, make sure you have the following:
 - Docker installed on your local machine.
 - AWS account with ECS and EC2 instance set up.
 - GitHub account with Docker Hub integration.
+- Create ECS cluster 
 
 ## GitHub Action Setup
 
@@ -19,6 +20,8 @@ Before running this GitHub Action in your GitHub account, ensure you have the fo
 3. **AWS_SECRET_ACCESS_KEY**: The Secret Access Key corresponding to your AWS Access Key ID for secure authentication.
 4. **AWS_ECR_REPO**: The name of the Amazon Elastic Container Registry (ECR) repository where you intend to push Docker images.
 5. **ECR_REPOSITORY**: The name of the repository in Elastic Container Registry where images will be stored.
+6. **ECS_CLUSTER**: The name of the ECS cluster
+7. **ECS_TASK_DEFINITION**: IT defines how your application runs in an ECS cluster, including Docker image details, resource allocations, and container settings.
 
 Having these details handy will streamline the setup process and ensure seamless execution of the GitHub Action.
 
@@ -48,17 +51,26 @@ Follow these steps to build, run, and deploy the Candy Crush application:
 5. **Deploy to AWS ECS**: 
    - Obtain the public IP address of your AWS EC2 instance.
    - Paste the public IP address in your web browser.
+     
+6. ** Add the Secret in Github action** : 
+   - You can obtain all the secret from AWS at the time of Creating a cluster and ECR 
+   - In this file i have add in such a way that even if ECR repo get depleted  at the of workflow it will automatically create the ECR repo and assgin it to ECS
+   - Images of secret you need to add
+   - ![image](https://github.com/user-attachments/assets/f8349666-1d3d-42bf-af2d-3b778faf30fe)
+
 
 ## GitHub Actions
 
-This repository is configured with GitHub Actions to automate the build and deployment process. Make sure to set up Docker Hub credentials and AWS IAM credentials as GitHub secrets for the workflows to run successfully.
+This repository is configured with GitHub Actions to automate the build and deployment process. Ensure Docker Hub and AWS IAM credentials are set up as GitHub secrets for the workflows to run successfully.
 
 ### Workflows:
-- `build-and-deploy.yml`: This workflow builds the Docker image, pushes it to Docker Hub, and deploys it to AWS ECS.
+- `build-and-deploy.yml`: This workflow builds the Docker image, pushes it to Docker Hub, and uploads it to Amazon ECR. It then uses the image from ECR for deployment to AWS ECS.
+
+- `build-docker-image-and-push-to-ecr-and-deploy-to-ecs.yml`: This workflow builds the Docker image, pushes it to Amazon ECR, and deploys it directly to AWS ECS. It eliminates the need for Docker Hub by using ECR as the primary container registry.
 
 ## Docker Hub Configuration
 
-Make sure to configure Docker Hub integration in your GitHub repository and add Docker Hub credentials as GitHub secrets.
+Configure Docker Hub integration in your GitHub repository and add Docker Hub credentials as GitHub secrets. This setup allows the workflow to push Docker images to both Docker Hub and Amazon ECR, ensuring consistent image usage for ECS deployment.
 
 ## AWS Configuration
 Ensure you have an AWS IAM user with the necessary permissions to interact with ECS and EC2. Add the IAM user access key and secret access key as GitHub secrets.
@@ -74,4 +86,5 @@ https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/5118e468-9681
 ## AWS ECR images
 ![image](https://github.com/Ingole712521/Candy-crush-Docker/assets/73941735/6dfa2b87-f0e5-4cfd-be52-0456a84298e1)
 
-
+## AWS ECS images
+![image](https://github.com/user-attachments/assets/e8a06e67-7290-4a34-a0c5-125b2e72dc2f)
