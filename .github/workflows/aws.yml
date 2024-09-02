@@ -69,8 +69,8 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: ${{ secrets.ECS_TASK_DEFINITION }} # Path to your ECS task definition file
-          container-name: candy # Replace with your actual container name in the task definition
+          task-definition: ${{ secrets.ECS_TASK_DEFINITION }} 
+          container-name: candy 
           image: nehal71/candy
 
       - name: Deploy Amazon ECS task definition
